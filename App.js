@@ -1,36 +1,36 @@
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, ImageBackground, StyleSheet, Text } from 'react-native';
 
-// You can import supported modules from npm
-import { Card } from 'react-native-paper';
-
-// or any files within the Snack
-import AssetExample from './components/AssetExample';
-
-export default function App() {
+const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.paragraph}>
-        Test Change..
-        
-      </Text>
-      <Card>
-        <AssetExample />
-      </Card>
-    </SafeAreaView>
+    <ImageBackground
+      source={require('./assets/palmiye.jpg')}
+      style={styles.backgroundImage}
+    >
+      <View style={styles.container}>
+        <Text style={styles.title}>Hoş Geldinizz</Text>
+       
+      </View>
+    </ImageBackground>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  backgroundImage: {
     flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
   },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
+  container: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Arka plana bir opaklık ekleyebilirsiniz
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
     fontWeight: 'bold',
+    color: 'white',
     textAlign: 'center',
   },
 });
+
+export default App;
