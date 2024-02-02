@@ -10,7 +10,8 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.paragraph}>
-        Test Change.
+        Test Change..
+        
       </Text>
       <Card>
         <AssetExample />
